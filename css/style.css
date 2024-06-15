@@ -1,0 +1,522 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+a:hover  {
+    text-decoration: none;
+}
+aside, nav, footer, header, section, main {
+	display: block;
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+ul, li, ul li {
+	list-style: none;
+}
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+address {
+  font-style: normal;
+}
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+input::-ms-clear {
+	display: none;
+}
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+label {
+	cursor: pointer;
+}
+legend {
+	display: block;
+}
+:root {
+    --blackAlternateColor: #17161B;
+    --blackMainColor: #1A191F;
+    --greenMainColor: #5BFF40;
+
+    --mainHeaderSize: 96px;
+    --secondaryHeaderSize: 48px;
+    --aboutUsHeaderSize: 36px;
+    --buttonHeaderSize: 25px;
+    --logoSize: 33px;
+    --navElementsSize: 19px;
+
+    --mainFont: Gilroy;
+}
+body {
+    background-color: var(--blackMainColor);
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+.navBarItems a {
+    color: white;
+    font-family: var(--mainFont), sans-serif;
+    font-weight: 500;
+    font-size: var(--navElementsSize);
+    height: 110px;
+    align-items: center;
+}
+#mainPage {
+    height: 15px;
+    aspect-ratio: 1;
+    margin-top: 3px;
+}
+#shopPage {
+    height: 16px;
+    width: 19px;
+    margin-top: 3px;
+}
+#aboutUsPage {
+    height: 17px;
+    aspect-ratio: 1;
+    margin-top: 3px;
+}
+#launcherPage {
+    width: 26px;
+    height: 13px;
+    margin-top: 5px;
+}
+.navBarContainer {
+    height: 110px;
+    width: 100vw;
+    background-color: var(--blackAlternateColor);
+}
+.Logo {
+    display: inline-flex;
+    color: white;
+    font-family: var(--mainFont), sans-serif;
+    font-weight: 800;
+    font-size: var(--logoSize);
+    height: 110px;
+    align-items: center;
+    padding-left: 150px;
+}
+.navBarContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.navBarItems a {
+    display: flex;
+    gap: 7px;
+
+}
+.Socials {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-right: 150px;
+}
+.navBarItems {
+    display: flex;
+    gap: 40px;
+}
+.Socials img {
+    height: 35px;
+    aspect-ratio: 1;
+}
+.Socials {
+    flex-shrink: 0;
+}
+.navBarItems a, .Socials a {
+    transition: 0.2s opacity ease-in-out;
+}
+.navBarItems a:hover, .Socials a:hover {
+    opacity: 0.5;
+}
+label {
+    display: none;
+}
+  
+#burger-toggle {
+    display: none;
+}
+.navBarItems.active {
+    display: none;
+}
+@media (max-width: 1240px) {
+    .navBarContainer {
+        height: 70px;
+    }
+    .Logo {
+        height: 70px;
+        scale: 0.7;
+    }
+    .navBarItems a {
+        height: 70px;
+        scale: 0.7;
+    }
+    .navBarItems {
+        gap: 10px;
+    }
+    .Socials {
+        scale: 0.7;
+    }
+}
+@media (max-width: 1070px) {
+    .navBarContainer {
+        height: 70px;
+    }
+    .Logo {
+        height: 70px;
+        scale: 0.65;
+    }
+    .navBarItems a {
+        height: 70px;
+        scale: 0.65;
+    }
+    .Socials {
+        scale: 0.65;
+    }
+}
+@media (max-width: 1020px) {
+    .navBarContainer {
+        height: 70px;
+    }
+    .Logo {
+        height: 70px;
+        scale: 0.65;
+        padding-left: 30px;
+    }
+    .navBarItems a {
+        height: 70px;
+        scale: 0.65;
+    }
+    .navBarItems {
+        gap: 10px;
+    }
+    .Socials {
+        scale: 0.65;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 800px) {
+    .navBarContainer {
+        height: 50px;
+    }
+    .Logo {
+        height: 50px;
+        scale: 0.5;
+    }
+    .navBarItems a {
+        height: 50px;
+        scale: 0.6;
+    }
+    .navBarItems {
+        gap: 0px;
+    }
+    .Socials {
+        scale: 0.5;
+    }
+}
+@media (max-width: 750px) {
+    #DS {
+        margin-top: 4px;
+    }
+    #VK {
+        margin-top: 4px;
+    }
+    .navBarContainer {
+        transition: 0.2s height ease-in-out;
+        height: 50px;
+        overflow: hidden;
+    }
+    .navBarContainer.open {
+        transition: 0.2s height ease-in-out;
+        height: 250px;
+    }
+    .Logo {
+        height: 50px;
+        padding-left: 0px;
+        scale: 0.7;
+    }
+    .navBarItems.open {
+       display: flex;
+       flex-direction: column;
+       margin-top: 50px;
+       align-items: center;
+       flex-shrink: 0;
+    }
+    .navBarItems.open a {
+        font-size: 24px;
+        text-align: center;
+    }
+    .navBarItems {
+        display: none;
+    }
+    .Socials {
+        scale: 0.7;
+        height: 50px;
+        gap: 10px;
+    }
+    #burger-toggle {
+        display: block;
+        opacity: 0;
+        position: relative;
+        top: 20px;
+        left: 30px;
+    }
+    #burger-toggle::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
+        background: rgba(255, 0, 0, 0.06);
+        cursor: pointer;
+    }
+    label {
+        position: relative;
+        display: block;
+        height: 25px;
+        width: 30px;
+        margin-top: -12px;
+        padding-left: 20px;
+    }
+    
+    label::after, label::before, label span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: .3s;
+    }
+    
+    label::before {
+        content: "";
+        top: 0;
+    }
+    
+    label::after {
+        content: "";
+        bottom: 0;
+    }
+    
+    label span {
+        top: 11px;
+    }
+    
+    #burger-toggle:checked ~ label::after {
+        transform: rotate(45deg);
+        bottom: 10px;
+    }
+    
+    #burger-toggle:checked ~ label::before {
+      transform: rotate(-45deg);
+      top: 12px;
+    }
+
+    #burger-toggle:checked ~ label span {
+      transform: rotate(-45deg);
+      top: 12px;
+    }
+    .navBarItems.active {
+        display: flex;
+    }
+}
+/* .Socials, .navBarItems, .Logo {
+    background-color: green;
+} */
+body {
+    user-select: none;
+}
+#neckyRender {
+    height: 1019px;
+    width: 1252px;
+    scale: 0.85;
+    flex-shrink: 0;
+}
+.render {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -980px;
+    margin-right: -110px;
+}
+.mainContainer {
+    height: 100vh;
+    width: 100%;
+}
+.h {
+    justify-content: center;
+    color: white;
+    font-size: var(--mainHeaderSize);
+    font-family: var(--mainFont);
+    font-weight: 800;
+    line-height: 80%;
+}
+#mainText {
+    width: 838px;
+    word-break: break-all;
+}
+#secondaryText {
+    color: white;
+    font-size: var(--secondaryHeaderSize);
+    font-family: var(--mainFont);
+    font-weight: 500;
+    line-height: 0.9;
+    padding-top: 30px;
+}
+#colored {
+    color: #5BFF40;
+}
+.buttons a {
+    color: white;
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: var(--buttonHeaderSize);
+    line-height: 80%;
+}
+.buttons {
+    display: flex;
+    gap: 36px;
+    padding-top: 67px;
+}
+.downloadLauncherBtn {
+    background: linear-gradient(90deg, rgba(41,126,27,1) 0%, rgba(113,226,44,1) 59%);
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.aboutUsBtn {
+    outline: solid 3px #5BFF40;
+    padding: 15px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.mainContent {
+    height: 100vh;
+    display: flex;
+    padding-left: 150px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -70px;
+}
+@media (max-width: 1710px) {
+    .mainContent {
+        scale: 0.8;
+        padding-left: 0px;
+    }
+    #neckyRender {
+        scale: 0.8;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 1560px) {
+    .mainContent {
+        scale: 0.75;
+        padding-left: 0px;
+    }
+    #neckyRender {
+        margin-top: 75px;
+        margin-right: -35px;
+    }
+}
+@media (max-width: 1460px) {
+    .navBarContainer {
+        width: 100%;
+    }
+    .mainContent {
+        scale: 0.7;
+        align-items: center;
+        text-align: center;
+    }
+    .render {
+        display: none;
+    }
+    #mainText {
+        align-items: center;
+        text-align: center;
+    }
+    .h {
+        align-items: center;
+        display: flex;
+    }
+    .buttons {
+        scale: 1.4;
+    }
+}
+@media (max-width: 650px) {
+    .navBarContainer {
+        width: 100%;
+    }
+    .mainContent {
+        scale: 0.55;
+        align-items: center;
+        text-align: center;
+    }
+    .render {
+        display: none;
+    }
+    #mainText {
+        align-items: center;
+        text-align: center;
+    }
+    .h {
+        align-items: center;
+        display: flex;
+    }
+    .buttons {
+        scale: 1.3;
+    }
+}
+@media (max-width: 520px) {
+    .navBarContainer {
+        width: 100%;
+    }
+    .mainContent {
+        scale: 0.4;
+        align-items: center;
+        text-align: center;
+    }
+    .render {
+        display: none;
+    }
+    #mainText {
+        align-items: center;
+        text-align: center;
+    }
+    .h {
+        align-items: center;
+        display: flex;
+    }
+    .buttons {
+        scale: 1.7;
+    }
+}
+body {
+    overflow: hidden;
+}
